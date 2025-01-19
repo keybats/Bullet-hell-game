@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHP : MonoBehaviour
 {
     [SerializeField] float maxHealth;
     [SerializeReference] float currentHealth;
-    // Start is called before the first frame update
+     Image bossHPBar;
+    
     void Start()
     {
+        bossHPBar = GameObject.Find("BossHPBarFill").GetComponent<Image>();
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -20,5 +23,6 @@ public class EnemyHP : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        bossHPBar.fillAmount = Mathf.Clamp(currentHealth / maxHealth, 0, 1);
     }
 }

@@ -9,6 +9,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] float projectileSpawnDistance;
     [SerializeField] float projectileSpeed;
     [SerializeField] float projectileDirection;
+    [SerializeField] int projectileAmount;
+    [SerializeField] float projectileSpread;
+    [SerializeField] string name;
 
     
     public float moveSpeedReductionOnFire;
@@ -18,6 +21,7 @@ public class Weapon : MonoBehaviour
 
     private void OnEnable()
     {
+
         isFiring = false;
     }
 
@@ -36,7 +40,7 @@ public class Weapon : MonoBehaviour
         if (isFiring)
         {
             Projectile p = Instantiate(projectile, transform.position + new Vector3(projectileSpawnDistance, 0), transform.rotation);
-            p.SetProjectileStats(projectileSpeed, 0 , 0, projectileDirection, true);
+            p.SetProjectileStats(projectileSpeed, projectileAmount , projectileSpread, projectileDirection, true);
             
         }
         yield return new WaitForSeconds(firingSpeed);

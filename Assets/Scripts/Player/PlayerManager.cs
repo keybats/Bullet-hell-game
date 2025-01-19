@@ -6,15 +6,22 @@ public class PlayerManager : MonoBehaviour
 {
     
     public static Player player;
-    List<Weapon> weaponInventory;
+    public KeyCode inventoryKey = KeyCode.E;
+
+    [SerializeField] List<Weapon> weaponInventory;
     [SerializeField] List<Weapon> equippedWeapons;
+    [SerializeField] GameObject inventoryPanel;
+    [SerializeField] WeaponInInventory weaponInInventoryTemplate;
+    [SerializeField] Vector2 inventoryStartPos;
+    [SerializeField] float distanceBetweenItems;
+
+    bool isInventoryOpen;
     
     
-    // Start is called before the first frame update
+    
+    
     void Start()
     {
-
-        
         Player.overworldLocation = transform.position;
         Player.weaponInventory = weaponInventory;
         Player.equippedWeapons = equippedWeapons;
@@ -27,9 +34,41 @@ public class PlayerManager : MonoBehaviour
         Player.equippedWeapons = this.equippedWeapons;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (Input.GetKeyDown(inventoryKey))
+        {
+            if (!isInventoryOpen)
+            {
+                Debug.Log("Opening inventory");
+                OpenInventory();
+            }
+            else
+            {
+                CloseInventory();
+            }
+        }
+    }
+
+    void OpenInventory()
+    {
+        inventoryPanel.SetActive(true);
+
+        foreach(Weapon weapon in Player.weaponInventory)
+        {
+            WeaponInInventory w = Instantiate(weaponInInventoryTemplate, inventoryPanel.transform);
+            w.GetComponent<RectTransform>().position = inventoryStartPos;
+            Debug.Log(weapon.name);
+            w.correspondingWeapon = weapon;
+            Debug.Log(w.correspondingWeapon.name);
+            w.isEquipped = Player.equippedWeapons.Contains(weapon);
+            w.SetText();
+            inventoryStartPos = new Vector2(inventoryStartPos.x, inventoryStartPos.y - distanceBetweenItems);
+        }
+    }
+    void CloseInventory()
+    {
+
     }
 }

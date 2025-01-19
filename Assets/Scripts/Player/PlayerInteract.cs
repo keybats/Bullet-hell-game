@@ -38,7 +38,16 @@ public class PlayerInteract : MonoBehaviour
         Debug.Log(currentlyFacingDirection);
         if (raycastHit.collider)
         {
-            raycastHit.collider.GetComponent<DialogueInitiator>().StartConversation();
+            Debug.Log("hit collider");
+            if (raycastHit.collider.GetComponent<DialogueInitiator>())
+            {
+                raycastHit.collider.GetComponent<DialogueInitiator>().StartConversation();
+            }
+            else if (raycastHit.collider.GetComponent<Pickup>())
+            {
+                Debug.Log("hit pickup");
+                raycastHit.collider.GetComponent<Pickup>().AddToInventory();
+            }
         }
         
     }
