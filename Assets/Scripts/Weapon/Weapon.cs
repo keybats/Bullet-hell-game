@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float projectileDirection;
     [SerializeField] int projectileAmount;
     [SerializeField] float projectileSpread;
-    [SerializeField] string name;
+    
 
     
     public float moveSpeedReductionOnFire;

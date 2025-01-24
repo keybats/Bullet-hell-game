@@ -8,14 +8,7 @@ public class Pickup : MonoBehaviour
 
 
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    Debug.Log("netrf");
-    //    if (collision.gameObject.GetComponent<PlayerController>())
-    //    {
 
-    //    }
-    //}
     public void AddToInventory()
     {
         Player.weaponInventory.Add(ItemToBePickedUp);

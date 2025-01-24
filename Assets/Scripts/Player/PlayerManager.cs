@@ -14,6 +14,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] WeaponInInventory weaponInInventoryTemplate;
     [SerializeField] Vector2 inventoryStartPos;
     [SerializeField] float distanceBetweenItems;
+
+
     
     List<WeaponInInventory> InstantiatedWeaponsInInventory;
     Vector2 inventoryPosition;
