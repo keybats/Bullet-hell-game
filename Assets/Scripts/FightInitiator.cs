@@ -14,14 +14,14 @@ public class FightInitiator : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        Debug.Log("Collision has happened");
-        if (collision.gameObject.GetComponent<PlayerController>())
-        {
-            StartBattle();
-        }
-    }
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    Debug.Log("Collision has happened");
+    //    if (collision.gameObject.GetComponent<PlayerController>())
+    //    {
+    //        StartBattle();
+    //    }
+    //}
 
 
 }

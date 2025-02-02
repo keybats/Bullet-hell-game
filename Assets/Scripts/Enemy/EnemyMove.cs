@@ -8,9 +8,9 @@ public class Attack
 {
     
     public bool isLaser;
-    public float laserStartRotation;
-    public float laserRotation;
-    public float laserDuration;
+    [ConditionalHide("isLaser", true)] public float laserStartRotation;
+    [ConditionalHide("isLaser", true)] public float laserRotation;
+    [ConditionalHide("isLaser", true)] public float laserDuration;
     public bool originatesFromEnemy;
     public Vector2 peojectileSpawnPoint;
     public float attackCooldown;

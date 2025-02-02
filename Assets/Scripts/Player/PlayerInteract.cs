@@ -9,10 +9,10 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] KeyCode interactKey;
     [SerializeField] float interactRange = 1f;
 
-    //temporory visual to show what direction the player before sprites and animations
+    //temporory visual to show what direction the player is facing before sprites and animations are added
     [SerializeField] Transform tempDirectionShower;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         layerMask = LayerMask.GetMask("Interactable");
@@ -24,7 +24,7 @@ public class PlayerInteract : MonoBehaviour
         currentlyFacingDirection = newDirection;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         float yValue = Input.GetAxisRaw("Vertical");
@@ -61,6 +61,10 @@ public class PlayerInteract : MonoBehaviour
             {
                 Debug.Log("hit pickup");
                 raycastHit.collider.GetComponent<Pickup>().AddToInventory();
+            }
+            else if (raycastHit.collider.GetComponent<FightInitiator>())
+            {
+                raycastHit.collider.GetComponent<FightInitiator>().StartBattle();
             }
         }
         

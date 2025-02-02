@@ -36,9 +36,9 @@ public class Projectile : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<EnemyHP>() && playerProjectile)
         {
-            Debug.LogWarning("Lucas, oj nej din pizza");
+            //Debug.LogWarning("Lucas, oj nej din pizza");
             collision.gameObject.GetComponent<EnemyHP>().TakeDamage(damage);
-            Debug.Log("yo 3");
+            //Debug.Log("yo 3");
 
             Destroy(gameObject);
         }

@@ -80,7 +80,7 @@ public class PlayerManager : MonoBehaviour
     {
         foreach (WeaponInInventory weapon in InstantiatedWeaponsInInventory)
         {
-            Debug.Log("destroying a weaon");
+            Debug.Log("destroying a weapon");
             Destroy(weapon.gameObject);
         }
         InstantiatedWeaponsInInventory.Clear();

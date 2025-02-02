@@ -6,15 +6,17 @@ public class DialogueBox : MonoBehaviour
 {
     public List<string> text;
     public List<float> textSpeeds;
+    public bool endsWithButton;
+    public List<DialogueInitiator> nextPart;
+    public List<string> dialogueOptionNames;
+    public bool endsWithFight;
+    public FightInitiator fightInitiator;
+    public List<GameObject> buttonList;
     [SerializeField] TextMeshProUGUI textMesh;
     bool hasTypedAllText = true;
 
     int index;
 
-    private void OnEnable()
-    {
-        StartDialogue();
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -36,14 +38,18 @@ public class DialogueBox : MonoBehaviour
             {
                 NextLine();
             }
-            else
+            else if (!endsWithButton && !endsWithFight)
             {
                 gameObject.SetActive(false);
+            }
+            else if (endsWithFight)
+            {
+                fightInitiator.StartBattle();
             }
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
         hasTypedAllText = false;
         index = 0;
@@ -67,6 +73,10 @@ public class DialogueBox : MonoBehaviour
             }
         }
         hasTypedAllText = true;
+        if (endsWithButton && index == text.Count - 1)
+        {
+            revealButtons();
+        }
     }
 
     void NextLine()
@@ -80,5 +90,27 @@ public class DialogueBox : MonoBehaviour
     {
         textMesh.text = text[index];
         hasTypedAllText = true;
+        if (endsWithButton && index == text.Count - 1)
+        {
+            revealButtons();
+        }
+    }
+
+    public void DialogueOption(int optionNumber)
+    {
+        foreach (GameObject button in buttonList)
+        {
+            button.SetActive(false);
+        }
+        textMesh.text = "";
+        nextPart[optionNumber].StartConversation();
+    }
+    void revealButtons()
+    {
+        for (int i = 0; i < nextPart.Count; i++)
+        {
+            buttonList[i].SetActive(true);
+            buttonList[i].GetComponentInChildren<TextMeshProUGUI>().text = dialogueOptionNames[i];
+        }
     }
 }
