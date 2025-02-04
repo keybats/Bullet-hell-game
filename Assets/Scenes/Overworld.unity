@@ -198,6 +198,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101050096}
   m_CullTransparentMesh: 1
+--- !u!1 &210106427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9213033177914306881, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+  m_PrefabInstance: {fileID: 5361886101175537800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &213388766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4275082045641590098, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+  m_PrefabInstance: {fileID: 5361886101175537800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &898900991
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,17 +493,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1482334768}
-  lines:
-  - I heard the northern bandits have taken over the south-eastern mines.
-  - This will not be good for business.
-  lineSpeeds:
-  - 0.1
-  - 0.01
-  endsWithChoice: 0
-  nextPart: []
-  dialogueOptionName: []
-  endsWithFight: 0
-  fightInitiator: {fileID: 0}
+  dialogueParts:
+  - lines:
+    - Huh?
+    lineSpeeds:
+    - 0.2
+    endsWithChoice: 1
+    nextPart: 010000000200000003000000
+    dialogueOptionName:
+    - 524
+    - Where am I?
+    - (Draw your weapon)
+    endsWithFight: 0
+    fightInitiator: {fileID: 0}
+  - lines:
+    - Test dialogu lin^^^^&
+    lineSpeeds:
+    - 0.04
+    endsWithChoice: 0
+    nextPart: 
+    dialogueOptionName: []
+    endsWithFight: 0
+    fightInitiator: {fileID: 0}
+  - lines:
+    - You are in "Overworld"
+    - uh... welcome or something
+    lineSpeeds:
+    - 0.04
+    - 0.04
+    endsWithChoice: 1
+    nextPart: 0400000005000000
+    dialogueOptionName:
+    - Cool.
+    - This sucks.
+    endsWithFight: 0
+    fightInitiator: {fileID: 0}
+  - lines:
+    - Oh.
+    - This combat emcounter isn't very well made but ok.
+    lineSpeeds:
+    - 0.1
+    - 0.05
+    endsWithChoice: 0
+    nextPart: 
+    dialogueOptionName: []
+    endsWithFight: 1
+    fightInitiator: {fileID: 1800411642}
+  - lines:
+    - Is it?
+    lineSpeeds:
+    - 0.09
+    endsWithChoice: 0
+    nextPart: 
+    dialogueOptionName: []
+    endsWithFight: 0
+    fightInitiator: {fileID: 1800411642}
+  - lines:
+    - yep.
+    lineSpeeds:
+    - 0.1
+    endsWithChoice: 0
+    nextPart: 
+    dialogueOptionName: []
+    endsWithFight: 0
+    fightInitiator: {fileID: 1800411642}
 --- !u!1 &1403101566
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +679,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1454460166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8628564846956785000, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+  m_PrefabInstance: {fileID: 5361886101175537800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1482334767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3713651603154606158, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
@@ -933,6 +1001,11 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!1 &1604872959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7590180719917740990, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+  m_PrefabInstance: {fileID: 5361886101175537800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1633949515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,58 +1284,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1865719982
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1865719984}
-  - component: {fileID: 1865719983}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1865719983
+--- !u!114 &1800411642 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 348921573891221702, guid: 3025a5b8663b81846af19f42a1c95ab3, type: 3}
+  m_PrefabInstance: {fileID: 937044058}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865719982}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f916f41f7da60b4a957245babd34c03, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f2cbc15b4a909c4285eb810e8df57cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 1482334768}
-  lines:
-  - 
-  lineSpeeds: []
-  endsWithChoice: 0
-  nextPart: []
-  dialogueOptionName: []
-  endsWithFight: 0
-  fightInitiator: {fileID: 0}
---- !u!4 &1865719984
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1865719982}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &348921574486105164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1327,6 +1359,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 898900995}
     m_Modifications:
+    - target: {fileID: 1226023373265465367, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226023373265465367, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 2915648465229626153, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1443,6 +1483,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4407515075322989668, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407515075322989668, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 5361886100635747388, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
       propertyPath: m_SizeDelta.y
       value: 280
@@ -1471,6 +1519,22 @@ PrefabInstance:
       propertyPath: textSpeeds.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6856032170805014332, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: buttonList.Array.data[0]
+      value: 
+      objectReference: {fileID: 213388766}
+    - target: {fileID: 6856032170805014332, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: buttonList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1454460166}
+    - target: {fileID: 6856032170805014332, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: buttonList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1604872959}
+    - target: {fileID: 6856032170805014332, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: buttonList.Array.data[3]
+      value: 
+      objectReference: {fileID: 210106427}
     - target: {fileID: 6856032170805014332, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
       propertyPath: textSpeeds.Array.data[0]
       value: 0.1
@@ -1514,6 +1578,22 @@ PrefabInstance:
     - target: {fileID: 7004037868483386581, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004994286864790968, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004994286864790968, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179682458797731891, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 7179682458797731891, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 7590180719917740990, guid: a0878872e663e5f498b5ae864d9b1ca7, type: 3}
       propertyPath: m_IsActive

@@ -55,7 +55,7 @@ public class PlayerInteract : MonoBehaviour
             Debug.Log("hit collider");
             if (raycastHit.collider.GetComponent<DialogueInitiator>())
             {
-                raycastHit.collider.GetComponent<DialogueInitiator>().StartConversation();
+                raycastHit.collider.GetComponent<DialogueInitiator>().StartConversation(0);
             }
             else if (raycastHit.collider.GetComponent<Pickup>())
             {

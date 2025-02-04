@@ -5,32 +5,24 @@ using UnityEngine;
 public class DialogueInitiator : MonoBehaviour
 {
     [SerializeField] DialogueBox dialogueBox;
-    [SerializeField] List<string> lines;
-    [SerializeField] List<float> lineSpeeds;
-    [SerializeField] bool endsWithChoice = false;
-    [ConditionalHide("endsWithChoice", true)] [SerializeField] List<DialogueInitiator> nextPart;
-    [ConditionalHide("endsWithChoice", true)] [SerializeField] List<string> dialogueOptionName;
-    [SerializeField] bool endsWithFight = false;
-    [ConditionalHide("endsWithFight", true)] [SerializeField] FightInitiator fightInitiator;
+
+    [SerializeField] List<DialoguePart> dialogueParts;
+    
 
 
-
-    public void StartConversation()
+    public void StartConversation(int dialogueIndex)
     {
-        dialogueBox.text = lines;
-        dialogueBox.textSpeeds = lineSpeeds;
+        dialogueBox.text = dialogueParts[dialogueIndex].lines;
+        dialogueBox.textSpeeds = dialogueParts[dialogueIndex].lineSpeeds;
         
-        dialogueBox.endsWithButton = endsWithChoice;
-        dialogueBox.nextPart = this.nextPart;
-        dialogueBox.dialogueOptionNames = this.dialogueOptionName;
+        dialogueBox.endsWithButton = dialogueParts[dialogueIndex].endsWithChoice;
+        dialogueBox.nextPart = dialogueParts[dialogueIndex].nextPart;
+        dialogueBox.dialogueOptionNames = dialogueParts[dialogueIndex].dialogueOptionName;
         
-
-        dialogueBox.endsWithFight = this.endsWithFight;
-        dialogueBox.fightInitiator = this.fightInitiator;
+        dialogueBox.endsWithFight = dialogueParts[dialogueIndex].endsWithFight;
+        dialogueBox.fightInitiator = dialogueParts[dialogueIndex].fightInitiator;
 
         dialogueBox.gameObject.SetActive(true);
-        dialogueBox.StartDialogue();
-    
-             
+        dialogueBox.StartDialogue(gameObject.GetComponent<DialogueInitiator>());
     }
 }

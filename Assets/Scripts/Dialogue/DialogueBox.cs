@@ -4,10 +4,11 @@ using UnityEngine;
 using TMPro;
 public class DialogueBox : MonoBehaviour
 {
+    DialogueInitiator dialogueInitiator;
     public List<string> text;
     public List<float> textSpeeds;
     public bool endsWithButton;
-    public List<DialogueInitiator> nextPart;
+    public List<int> nextPart;
     public List<string> dialogueOptionNames;
     public bool endsWithFight;
     public FightInitiator fightInitiator;
@@ -49,8 +50,9 @@ public class DialogueBox : MonoBehaviour
         }
     }
 
-    public void StartDialogue()
+    public void StartDialogue(DialogueInitiator converser)
     {
+        dialogueInitiator = converser;
         hasTypedAllText = false;
         index = 0;
         textMesh.text = string.Empty;
@@ -61,6 +63,7 @@ public class DialogueBox : MonoBehaviour
     {
         foreach (char character in text[index].ToCharArray())
         {
+            Debug.Log(index + " indecx" + hasTypedAllText);
             if (!hasTypedAllText)
             {
 
@@ -103,7 +106,7 @@ public class DialogueBox : MonoBehaviour
             button.SetActive(false);
         }
         textMesh.text = "";
-        nextPart[optionNumber].StartConversation();
+        dialogueInitiator.StartConversation(nextPart[optionNumber]);
     }
     void revealButtons()
     {
