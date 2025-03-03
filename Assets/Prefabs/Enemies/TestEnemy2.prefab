@@ -211,363 +211,389 @@ MonoBehaviour:
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.5
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 1
+      attackCooldown: 0.7
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.2
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.5
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     - isLaser: 0
       laserStartRotation: 0
       laserRotation: 0
       laserDuration: 0
       originatesFromEnemy: 1
       peojectileSpawnPoint: {x: 0, y: 0}
-      attackCooldown: 0.04
       projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
       projectileAmount: 0
       projectileSpeed: 5
       projectileSpread: 0
       projectileRotation: 90
       damage: 2
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 1.9
     movements:
     - movementPosition: {x: 8, y: 0.4}
       movementSpeed: 2
     - movementPosition: {x: 8, y: 3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -3}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 3}
-      movementSpeed: 25
-    - movementPosition: {x: 8, y: -3}
-      movementSpeed: 25
+      movementSpeed: 5
+    - movementPosition: {x: 8, y: -2.5}
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 0.5}
-      movementSpeed: 2
+      movementSpeed: 4
     - movementPosition: {x: 8, y: -0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: 0.5}
-      movementSpeed: 25
+      movementSpeed: 5
     - movementPosition: {x: 8, y: -0.5}
-      movementSpeed: 25
+      movementSpeed: 5
+    - movementPosition: {x: 8, y: 0.5}
+      movementSpeed: 5
     startPosition: {x: 8, y: 0}
     startPosSpeed: 4
     name: TEst move v5
@@ -578,13 +604,14 @@ MonoBehaviour:
       laserDuration: 0
       originatesFromEnemy: 0
       peojectileSpawnPoint: {x: -4, y: 0}
-      attackCooldown: 0.25
       projectile: {fileID: 7016614162223243697, guid: 2cd798844eb70d142a19220d9300e3af, type: 3}
       projectileAmount: 6
       projectileSpeed: 1
       projectileSpread: 160
       projectileRotation: -90
       damage: 1
+      CooldownIndependentFromMovement: 0
+      attackCooldown: 0.25
     movements:
     - movementPosition: {x: 9.5, y: 0}
       movementSpeed: 4

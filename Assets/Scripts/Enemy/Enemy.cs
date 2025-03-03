@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public List<EnemyMove> moves;
     bool isBusy = false;
     [SerializeField] Laser laser;
+    bool attackReady = false;
 
     private void Start()
     {
@@ -78,6 +79,7 @@ public class Enemy : MonoBehaviour
             
 
             i++;
+            attackReady = true;
         }
         //Debug.Log("Move time: " + Mathf.Round((Time.unscaledTime - startTime) * 100) + " (cs)");
         isBusy = false;
@@ -90,8 +92,16 @@ public class Enemy : MonoBehaviour
         
         foreach (Attack attack in currentMove.attacks)
         {
+            if (attack.CooldownIndependentFromMovement)
+            {
+                yield return new WaitForSeconds(attack.attackCooldown);
+                
+            }
+            else
+            {
+                yield return new WaitUntil(() => attackReady == true);
+            }
             
-            yield return new WaitForSeconds(attack.attackCooldown);
             Vector2 projectileSpawnPoint;
             if (attack.originatesFromEnemy)
             {
@@ -110,15 +120,23 @@ public class Enemy : MonoBehaviour
             else
             {
                 //Debug.Log("not laser");
-                Projectile p = Instantiate(attack.projectile, projectileSpawnPoint, attack.projectile.transform.rotation);
-                p.SetProjectileStats(attack.projectileSpeed, attack.projectileAmount, attack.projectileSpread, attack.projectileRotation, false);
+                SpawnProjectile(attack, projectileSpawnPoint);
             }
-
+            attackReady = false;
         }
+
+
+    }
+
+    void SpawnProjectile(Attack attack, Vector2 projectileSpawnPoint)
+    {
+        Projectile p = Instantiate(attack.projectile, projectileSpawnPoint, attack.projectile.transform.rotation);
+        p.SetProjectileStats(attack.projectileSpeed, attack.projectileAmount, attack.projectileSpread, attack.projectileRotation, false, attack.damage);
     }
 
     IEnumerator ActivateLaser(float rotation, float startingRotation, float activationDuration, float damage)
     {
+        laser.damage = damage;
         Debug.Log("laser activated");
 
         laser.ActivateLaser();

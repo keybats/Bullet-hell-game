@@ -16,17 +16,18 @@ public class Projectile : MonoBehaviour
         return speed;
     }
 
-    public void SetProjectileStats(float projectileSpeed, int projectileAmount, float projectileSpread, float projectileRotation, bool isPlayerProjectile)
+    public void SetProjectileStats(float projectileSpeed, int projectileAmount, float projectileSpread, float projectileRotation, bool isPlayerProjectile, float projectileDamage)
     {
         speed = projectileSpeed;
         spread = projectileSpread;
         playerProjectile = isPlayerProjectile;
+        damage = projectileDamage;
         
         transform.Rotate(0, 0, projectileRotation + spread / 2);
         for(int i = 1; i < projectileAmount; i++)
         {
             Projectile p = Instantiate(this, transform.position, transform.rotation);
-            p.SetProjectileStats(projectileSpeed, 0, 0f, 0, isPlayerProjectile);
+            p.SetProjectileStats(projectileSpeed, 0, 0f, 0, isPlayerProjectile, projectileDamage);
             p.transform.Rotate(0, 0, -spread / (projectileAmount - 1) * i);
         }
     }

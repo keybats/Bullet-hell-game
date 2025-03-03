@@ -11,11 +11,18 @@ public class Weapon : MonoBehaviour
     [SerializeField] float projectileDirection;
     [SerializeField] int projectileAmount;
     [SerializeField] float projectileSpread;
+    [SerializeField] float damage;
     
+    public bool isHeavy;
+    public float slowdown;
 
-    
-    public float moveSpeedReductionOnFire;
     public bool isFiring;
+
+
+
+
+
+
 
 
 
@@ -23,6 +30,7 @@ public class Weapon : MonoBehaviour
     {
 
         isFiring = false;
+
     }
 
     private void FixedUpdate()
@@ -40,7 +48,7 @@ public class Weapon : MonoBehaviour
         if (isFiring)
         {
             Projectile p = Instantiate(projectile, transform.position + new Vector3(projectileSpawnDistance, 0), transform.rotation);
-            p.SetProjectileStats(projectileSpeed, projectileAmount , projectileSpread, projectileDirection, true);
+            p.SetProjectileStats(projectileSpeed, projectileAmount , projectileSpread, projectileDirection, true, damage);
             
         }
         yield return new WaitForSeconds(firingSpeed);

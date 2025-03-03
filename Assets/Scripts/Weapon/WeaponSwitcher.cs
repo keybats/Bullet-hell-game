@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class WeaponSwitcher : MonoBehaviour
 {
+    List<Weapon> weapons = new List<Weapon>();
     [SerializeField] int currentWeapon = 0;
-    
+    PlayerController player;
 
     void Start()
     {
+        player = transform.parent.GetComponent<PlayerController>();
         CreateWeapons();
         SetWeaponActive();
         
@@ -30,9 +32,12 @@ public class WeaponSwitcher : MonoBehaviour
 
     void CreateWeapons()
     {
+        
         foreach(Weapon weapon in Player.equippedWeapons)
         {
-            Debug.Log(Instantiate(weapon, transform).name + "was created");
+            Instantiate(weapon, transform);
+            weapons.Add(weapon);
+            
         }
     }
 
@@ -44,6 +49,14 @@ public class WeaponSwitcher : MonoBehaviour
             if (weaponIndex == currentWeapon)
             {
                 weapon.gameObject.SetActive(true);
+                if (weapons[weaponIndex].isHeavy)
+                {
+                    player.weaponSlowdown = weapons[weaponIndex].slowdown;
+                }
+                else
+                {
+                    player.weaponSlowdown = 1f;
+                }
             }
             else
             {
@@ -51,6 +64,7 @@ public class WeaponSwitcher : MonoBehaviour
             }
             weaponIndex++;
         }
+
     }
 
     void ProcessKeyInput()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class PlayerManager : MonoBehaviour
         Player.overworldLocation = transform.position;
         Player.weaponInventory = this.weaponInventory;
         Player.equippedWeapons = this.equippedWeapons;
+        Debug.Log(SceneManager.GetActiveScene().name);
+        Player.currentSceneName = SceneManager.GetActiveScene().name;
     }
 
 

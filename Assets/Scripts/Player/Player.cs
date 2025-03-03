@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 
 public class Player
 {
+    public static string currentSceneName;
     public static int enemyIDs;
     public static Vector2 overworldLocation;
     public static float maxHitPoints = 100;

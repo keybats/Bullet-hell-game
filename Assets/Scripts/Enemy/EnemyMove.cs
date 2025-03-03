@@ -13,13 +13,14 @@ public class Attack
     [ConditionalHide("isLaser", true)] public float laserDuration;
     public bool originatesFromEnemy;
     public Vector2 peojectileSpawnPoint;
-    public float attackCooldown;
     public Projectile projectile;
     public int projectileAmount;
     public float projectileSpeed;
     public float projectileSpread;
     public float projectileRotation;
     public float damage;
+    public bool CooldownIndependentFromMovement;
+    [ConditionalHide("CooldownIndependentFromMovement", true)] public float attackCooldown;
 }
 
 [System.Serializable]

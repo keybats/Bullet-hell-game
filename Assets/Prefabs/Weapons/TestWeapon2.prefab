@@ -44,12 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 7080303260411354063, guid: 2bf7814b7b650bb4c8ed2e2629df9e81, type: 3}
-  firingSpeed: 2
+  firingSpeed: 1
   projectileSpawnDistance: 1
   projectileSpeed: 4
   projectileDirection: -90
   projectileAmount: 0
   projectileSpread: 0
-  name: Tube
-  moveSpeedReductionOnFire: 0
+  damage: 7
+  isHeavy: 1
+  slowdown: 0.6
   isFiring: 0

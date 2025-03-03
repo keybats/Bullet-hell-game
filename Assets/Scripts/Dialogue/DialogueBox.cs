@@ -63,7 +63,7 @@ public class DialogueBox : MonoBehaviour
     {
         foreach (char character in text[index].ToCharArray())
         {
-            Debug.Log(index + " indecx" + hasTypedAllText);
+            //Debug.Log(index + " indecx" + hasTypedAllText);
             if (!hasTypedAllText)
             {
 

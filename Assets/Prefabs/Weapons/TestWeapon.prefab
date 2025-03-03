@@ -44,12 +44,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 7016614162223243697, guid: 2cd798844eb70d142a19220d9300e3af, type: 3}
-  firingSpeed: 1
+  firingSpeed: 0.2
   projectileSpawnDistance: 1
   projectileSpeed: 3
   projectileDirection: -90
   projectileAmount: 0
   projectileSpread: 0
-  name: Bolt
-  moveSpeedReductionOnFire: 0
+  damage: 1
+  isHeavy: 0
+  slowdown: 0.7
   isFiring: 0

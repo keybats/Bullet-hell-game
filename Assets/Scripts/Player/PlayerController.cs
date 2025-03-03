@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 1;
 
-    
+    public float weaponSlowdown = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        transform.Translate(movementVector * speed * Time.deltaTime);
+        transform.Translate(movementVector * speed * Time.deltaTime * weaponSlowdown);
     }
 
 
