@@ -50,6 +50,10 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
 
         }
+        else if (collision.gameObject.GetComponent<SpAtkCharge>() && !playerProjectile)
+        {
+            collision.gameObject.GetComponent<SpAtkCharge>().GainCharge(0.1f);
+        }
         else if (collision.gameObject.GetComponent<Walls>())
         {
             Destroy(gameObject);
