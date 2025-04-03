@@ -9,8 +9,8 @@ public class SpAtkCharge : MonoBehaviour
     float charge = 0;
     Image spAtkBar;
     public KeyCode SpAtkKey;
-    public GameObject prefabSpAtk;
     GameObject spAtk;
+    [SerializeField] float chargeIncrement;
 
     
     
@@ -18,15 +18,27 @@ public class SpAtkCharge : MonoBehaviour
     {
         
         spAtkBar = GameObject.Find("SpecialBarFill").GetComponent<Image>();
-        spAtk = Instantiate(prefabSpAtk);
+        spAtk = Instantiate(Player.equippedSpAtk);
         spAtk.SetActive(false);
         
     }
 
-
-    public void GainCharge(float gainedCharge)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        charge += gainedCharge;
+        Debug.Log("collision!");
+
+        if (collision.gameObject.GetComponent<Projectile>())
+        {
+            if (!collision.gameObject.GetComponent<Projectile>().playerProjectile)
+            {
+                GainCharge();
+            }
+        }
+    }
+
+    public void GainCharge()
+    {
+        charge += chargeIncrement;
         spAtkBar.fillAmount = charge;
         if (charge > maxCharge)
         {

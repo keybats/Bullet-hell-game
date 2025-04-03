@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  weaponSlowdown: 1
 --- !u!114 &8255582784344988656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358c113fdf0e69847a9ba395cb5a0ec4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  empty: {fileID: 4032478959234173533, guid: af03b2b792971b34ba49a7e4e46cf2d6, type: 3}
   inventoryKey: 105
   weaponInventory:
   - {fileID: 4363457075428844362, guid: 3ca272aab1e586947a7df3a4b5def36d, type: 3}
@@ -203,10 +205,16 @@ MonoBehaviour:
   equippedWeapons:
   - {fileID: 4363457075428844362, guid: 3ca272aab1e586947a7df3a4b5def36d, type: 3}
   - {fileID: 8090838090982581788, guid: edbb86c738e3f7348a3fceaf021c33c2, type: 3}
+  spAttacks:
+  - {fileID: 9029024299638786872, guid: fa8a80a5cf3acd44f9ab809ec93ecd46, type: 3}
+  - {fileID: 4202989741846650789, guid: f6148d321d063d048b7abbbd26da4417, type: 3}
+  equippedSpAtk: {fileID: 4202989741846650789, guid: f6148d321d063d048b7abbbd26da4417, type: 3}
   inventoryPanel: {fileID: 0}
-  weaponInInventoryTemplate: {fileID: 5678919169680930758, guid: 017ced89cf85ce94aa59e19663e847fe, type: 3}
+  ItemInInventoryTemplate: {fileID: 0}
   inventoryStartPos: {x: 400, y: 930}
   distanceBetweenItems: 100
+  distanceBetweenRows: 0
+  InstantiatedItemsInInventory: []
 --- !u!61 &8255582784344988659
 BoxCollider2D:
   m_ObjectHideFlags: 0

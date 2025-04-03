@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] float damage;
     //int projectileAmount;
     Rigidbody2D rb;
-    bool playerProjectile = false;
+    public bool playerProjectile = false;
     
     public float GetSpeed()
     {
@@ -50,10 +50,7 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
 
         }
-        else if (collision.gameObject.GetComponent<SpAtkCharge>() && !playerProjectile)
-        {
-            collision.gameObject.GetComponent<SpAtkCharge>().GainCharge(0.1f);
-        }
+
         else if (collision.gameObject.GetComponent<Walls>())
         {
             Destroy(gameObject);

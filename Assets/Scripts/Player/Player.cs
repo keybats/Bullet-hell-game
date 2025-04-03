@@ -13,5 +13,7 @@ public class Player
     public static float maxHitPoints = 100;
     //public static float currentHitPoints = 100;
     public static List<Weapon> weaponInventory;
+    public static List<GameObject> spAtkInventory;
     public static List<Weapon> equippedWeapons;
+    public static GameObject equippedSpAtk;
 }

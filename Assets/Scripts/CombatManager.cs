@@ -12,7 +12,7 @@ public class CombatManager : MonoBehaviour
 
     void Start()
     {
-        
+        //Instantiate(Player.equippedSpAtk);
         Instantiate(enemyPrefabList[Player.enemyIDs], transform);
         Debug.Log(Player.currentSceneName);
     }

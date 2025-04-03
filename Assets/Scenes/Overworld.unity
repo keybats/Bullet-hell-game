@@ -1664,6 +1664,14 @@ PrefabInstance:
       propertyPath: inventoryPanel
       value: 
       objectReference: {fileID: 101050096}
+    - target: {fileID: 8255582784344988656, guid: ccaadfe67e4e2704f8d7637be6a42c17, type: 3}
+      propertyPath: distanceBetweenRows
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255582784344988656, guid: ccaadfe67e4e2704f8d7637be6a42c17, type: 3}
+      propertyPath: ItemInInventoryTemplate
+      value: 
+      objectReference: {fileID: 5678919169680930758, guid: 017ced89cf85ce94aa59e19663e847fe, type: 3}
     - target: {fileID: 8255582784344988668, guid: ccaadfe67e4e2704f8d7637be6a42c17, type: 3}
       propertyPath: m_Name
       value: Player (overworld)

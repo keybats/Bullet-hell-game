@@ -5,20 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
-    
+    [SerializeField] GameObject empty;
     public static Player player;
     public KeyCode inventoryKey = KeyCode.E;
 
     [SerializeField] List<Weapon> weaponInventory;
     [SerializeField] List<Weapon> equippedWeapons;
+    [SerializeField] List<GameObject> spAttacks;
+    [SerializeField] GameObject equippedSpAtk;
     [SerializeField] GameObject inventoryPanel;
-    [SerializeField] WeaponInInventory weaponInInventoryTemplate;
+    [SerializeField] ItemInInventory ItemInInventoryTemplate;
     [SerializeField] Vector2 inventoryStartPos;
     [SerializeField] float distanceBetweenItems;
+    [SerializeField] float distanceBetweenRows;
 
 
     
-    List<WeaponInInventory> InstantiatedWeaponsInInventory;
+    public List<ItemInInventory> InstantiatedItemsInInventory;
     Vector2 inventoryPosition;
     bool isInventoryOpen;
     
@@ -29,8 +32,10 @@ public class PlayerManager : MonoBehaviour
     {
         Player.overworldLocation = transform.position;
         Player.weaponInventory = weaponInventory;
+        Player.spAtkInventory = spAttacks;
         Player.equippedWeapons = equippedWeapons;
-        InstantiatedWeaponsInInventory = new List<WeaponInInventory>();
+        Player.equippedSpAtk = equippedSpAtk;
+        InstantiatedItemsInInventory = new List<ItemInInventory>();
 
     }
 
@@ -68,25 +73,43 @@ public class PlayerManager : MonoBehaviour
         
         foreach (Weapon weapon in Player.weaponInventory)
         {
-            WeaponInInventory w = Instantiate(weaponInInventoryTemplate, inventoryPanel.transform);
+            ItemInInventory w = Instantiate(ItemInInventoryTemplate, inventoryPanel.transform);
+            w.empty = this.empty;
             w.GetComponent<RectTransform>().position = inventoryPosition;
             Debug.Log(weapon.name);
-            w.correspondingWeapon = weapon;
+            w.itemType = ItemInInventory.ItemType.Weapon;
+            w.correspondingItem = weapon.gameObject;
             w.isEquipped = Player.equippedWeapons.Contains(weapon);
             w.SetText();
             inventoryPosition = new Vector2(inventoryPosition.x, inventoryPosition.y - distanceBetweenItems);
             //Debug.Log(w.gameObject);
-            InstantiatedWeaponsInInventory.Add(w);
+            InstantiatedItemsInInventory.Add(w);
+        }
+
+        inventoryPosition = new Vector2(inventoryPosition.x + distanceBetweenRows, inventoryStartPos.y);
+
+        foreach (GameObject spAtk in Player.spAtkInventory)
+        {
+            ItemInInventory s = Instantiate(ItemInInventoryTemplate, inventoryPanel.transform);
+            s.empty = this.empty;
+            s.GetComponent<RectTransform>().position = inventoryPosition;
+            s.itemType = ItemInInventory.ItemType.SpAtk;
+            s.playerManager = this;
+            s.correspondingItem = spAtk;
+            s.isEquipped = Player.equippedSpAtk.Equals(spAtk);
+            s.SetText();
+            inventoryPosition = new Vector2(inventoryPosition.x, inventoryPosition.y - distanceBetweenItems);
+            InstantiatedItemsInInventory.Add(s);
         }
     }
     void CloseInventory()
     {
-        foreach (WeaponInInventory weapon in InstantiatedWeaponsInInventory)
+        foreach (ItemInInventory weapon in InstantiatedItemsInInventory)
         {
             Debug.Log("destroying a weapon");
             Destroy(weapon.gameObject);
         }
-        InstantiatedWeaponsInInventory.Clear();
+        InstantiatedItemsInInventory.Clear();
         Debug.Log("disbling invnentory");
         inventoryPanel.SetActive(false);
         isInventoryOpen = false;

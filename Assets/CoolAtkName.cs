@@ -13,6 +13,7 @@ public class CoolAtkName : MonoBehaviour
     [SerializeField] float pspeed;
     [SerializeField] float damage;
     [SerializeField] float delay;
+    //public float chargeGainMod;
     private void OnEnable()
     {
         if(firstTime)
