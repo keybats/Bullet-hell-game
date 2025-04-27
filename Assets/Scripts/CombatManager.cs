@@ -14,7 +14,7 @@ public class CombatManager : MonoBehaviour
     {
         //Instantiate(Player.equippedSpAtk);
         Instantiate(enemyPrefabList[Player.enemyIDs], transform);
-        Debug.Log(Player.currentSceneName);
+        //Debug.Log(Player.currentSceneName);
     }
     public void OnBattleEnd()
     {

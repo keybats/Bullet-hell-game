@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9029024299638786874}
   - component: {fileID: 8622973450221890818}
+  - component: {fileID: -6865489422494854025}
   m_Layer: 0
   m_Name: Sakuya
   m_TagString: Untagged
@@ -45,3 +46,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeMod: 0.5
   duration: 5
+--- !u!114 &-6865489422494854025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9029024299638786872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d7c721d997dd84b897055b0097bcbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chargeMod: 1

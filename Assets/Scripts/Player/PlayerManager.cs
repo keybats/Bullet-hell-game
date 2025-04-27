@@ -11,8 +11,8 @@ public class PlayerManager : MonoBehaviour
 
     [SerializeField] List<Weapon> weaponInventory;
     [SerializeField] List<Weapon> equippedWeapons;
-    [SerializeField] List<GameObject> spAttacks;
-    [SerializeField] GameObject equippedSpAtk;
+    [SerializeField] List<SpAtk> spAttacks;
+    [SerializeField] SpAtk equippedSpAtk;
     [SerializeField] GameObject inventoryPanel;
     [SerializeField] ItemInInventory ItemInInventoryTemplate;
     [SerializeField] Vector2 inventoryStartPos;
@@ -76,7 +76,7 @@ public class PlayerManager : MonoBehaviour
             ItemInInventory w = Instantiate(ItemInInventoryTemplate, inventoryPanel.transform);
             w.empty = this.empty;
             w.GetComponent<RectTransform>().position = inventoryPosition;
-            Debug.Log(weapon.name);
+            //Debug.Log(weapon.name);
             w.itemType = ItemInInventory.ItemType.Weapon;
             w.correspondingItem = weapon.gameObject;
             w.isEquipped = Player.equippedWeapons.Contains(weapon);
@@ -88,14 +88,16 @@ public class PlayerManager : MonoBehaviour
 
         inventoryPosition = new Vector2(inventoryPosition.x + distanceBetweenRows, inventoryStartPos.y);
 
-        foreach (GameObject spAtk in Player.spAtkInventory)
+        foreach (SpAtk spAtk in Player.spAtkInventory)
         {
             ItemInInventory s = Instantiate(ItemInInventoryTemplate, inventoryPanel.transform);
             s.empty = this.empty;
             s.GetComponent<RectTransform>().position = inventoryPosition;
             s.itemType = ItemInInventory.ItemType.SpAtk;
             s.playerManager = this;
-            s.correspondingItem = spAtk;
+            //Debug.Log("name " + spAtk.gameObject.name);
+            s.correspondingItem = spAtk.gameObject;
+            Debug.Log(Player.equippedSpAtk);
             s.isEquipped = Player.equippedSpAtk.Equals(spAtk);
             s.SetText();
             inventoryPosition = new Vector2(inventoryPosition.x, inventoryPosition.y - distanceBetweenItems);
@@ -106,7 +108,7 @@ public class PlayerManager : MonoBehaviour
     {
         foreach (ItemInInventory weapon in InstantiatedItemsInInventory)
         {
-            Debug.Log("destroying a weapon");
+            //Debug.Log("destroying a weapon");
             Destroy(weapon.gameObject);
         }
         InstantiatedItemsInInventory.Clear();

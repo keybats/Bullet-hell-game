@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136212359677633971}
   - component: {fileID: -6701316515347576931}
+  - component: {fileID: -7055647137701116589}
   m_Layer: 0
   m_Name: TestSpAttack
   m_TagString: Untagged
@@ -50,3 +51,16 @@ MonoBehaviour:
   pspeed: 4
   damage: 3
   delay: 0.07
+--- !u!114 &-7055647137701116589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4202989741846650789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d7c721d997dd84b897055b0097bcbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chargeMod: 1

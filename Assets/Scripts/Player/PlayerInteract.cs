@@ -45,9 +45,6 @@ public class PlayerInteract : MonoBehaviour
     }
     void InteractCheck()
     {
-
-        
-        
         RaycastHit2D raycastHit = Physics2D.Raycast(transform.position, currentlyFacingDirection, interactRange, layerMask);
         //Debug.Log(currentlyFacingDirection);
         if (raycastHit.collider)

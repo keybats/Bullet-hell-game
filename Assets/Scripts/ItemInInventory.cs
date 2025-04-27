@@ -38,7 +38,7 @@ public class ItemInInventory : MonoBehaviour
             }
             else if (itemType == ItemType.SpAtk)
             {
-                Player.equippedSpAtk = empty;
+                Player.equippedSpAtk = null;
             }
             buttonText.text = correspondingItem.name;
         }
@@ -65,7 +65,7 @@ public class ItemInInventory : MonoBehaviour
                 }
             }
             isEquipped = true;
-            Player.equippedSpAtk = correspondingItem;
+            Player.equippedSpAtk = correspondingItem.GetComponent<SpAtk>();
             buttonText.text = correspondingItem.name + " - equipped";
         }
     }

@@ -53,7 +53,8 @@ public class PlayerController : MonoBehaviour
         Vector2 movementVector = new Vector2(xValue, yValue).normalized;
 
 
-
+        //Debug.Log("x value " + xValue);
+        //Debug.Log("Vector " + movementVector);
 
         transform.Translate(movementVector * speed * Time.deltaTime * weaponSlowdown);
     }

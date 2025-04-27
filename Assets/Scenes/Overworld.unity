@@ -1672,6 +1672,14 @@ PrefabInstance:
       propertyPath: ItemInInventoryTemplate
       value: 
       objectReference: {fileID: 5678919169680930758, guid: 017ced89cf85ce94aa59e19663e847fe, type: 3}
+    - target: {fileID: 8255582784344988656, guid: ccaadfe67e4e2704f8d7637be6a42c17, type: 3}
+      propertyPath: spAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: -6865489422494854025, guid: fa8a80a5cf3acd44f9ab809ec93ecd46, type: 3}
+    - target: {fileID: 8255582784344988656, guid: ccaadfe67e4e2704f8d7637be6a42c17, type: 3}
+      propertyPath: spAttacks.Array.data[1]
+      value: 
+      objectReference: {fileID: -7055647137701116589, guid: f6148d321d063d048b7abbbd26da4417, type: 3}
     - target: {fileID: 8255582784344988668, guid: ccaadfe67e4e2704f8d7637be6a42c17, type: 3}
       propertyPath: m_Name
       value: Player (overworld)
